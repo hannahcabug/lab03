@@ -93,3 +93,23 @@ section {
 footer{
     background-color: #16242f;
 }
+
+.sub-header{
+    display: grid;
+    justify-content: center;
+}
+
+.links{
+    display: grid;
+    justify-content: center;
+}
+
+.peewee{
+    display: grid;
+    justify-content: center;
+}
+
+.colours{
+    display: grid;
+    justify-content: right;
+}
