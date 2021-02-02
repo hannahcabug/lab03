@@ -75,9 +75,32 @@ header {
   max-width: 12rem;
 }
 
+.sponsors img{
+  max-width: 15rem;
+}
+
+.footer-colors{
+  display: grid;
+  justify-content: right;
+  align-items: right;
+  max-width: 30rem;
+}
+
+.project img{
+  max-width: 35rem;
+}
+
+footer{
+  color: white;
+  background-color: rgb(22, 36, 47);
+}
 
 /* Small only */
-@media screen and (max-width: 39.9375em) {}
+@media screen and (max-width: 39.9375em) {
+  .sponsors img{
+    display: none;
+  }
+}
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
@@ -150,10 +173,10 @@ header {
 /* ==========================================================================
    THEME
    ========================================================================== */
-  .page__footer{
-    background-color: #222;
+  .page-footer{
+    background-color: rgb(22, 36, 47);
   }
-  .page__slider{
+  .page-slider{
     background-color: rgb(230, 230, 230);
   }
 
