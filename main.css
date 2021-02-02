@@ -20,7 +20,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px;
+  border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -59,7 +59,7 @@ div,
 section,
 footer,
 header {
-  border: 1px ;
+  border: 1px solid #ccc;
 }
 .column{
   margin-right: 1rem;
@@ -149,10 +149,6 @@ footer{
   .span-full{
     grid-column-start: 1;
     grid-column-end: -1;
-  }
-
-  .page-footer .socials {
-    display: none;
   }
 
 }
