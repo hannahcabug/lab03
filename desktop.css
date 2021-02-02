@@ -1,0 +1,115 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+div,
+header,
+footer,
+section {
+    border: 1px ;
+    min-height: 3rem;
+}
+
+.column {
+    margin: 1rem;
+}
+
+.row {
+    display: grid;
+    width: 80vw;
+    min-width: 60rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.slides{
+    display: grid;
+    justify-content: center;
+}
+
+.col-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.col-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.col-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.col-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.col-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.col-7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.col-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.col-1-2 {
+    grid-template-columns: 1fr 2fr;
+}
+
+.row-span {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.sub-row {
+    display: grid;
+}
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+.logo{
+    display: grid;
+    align-items: baseline;
+}
+
+.heading{
+    display: grid;
+    justify-content: center;
+}
+
+.container .slides{
+    background-color: lightgray;
+}
+
+footer{
+    background-color: #16242f;
+}
+
+.sub-header{
+    display: grid;
+    justify-content: center;
+}
+
+.links{
+    display: grid;
+    justify-content: center;
+}
+
+.peewee{
+    display: grid;
+    justify-content: center;
+}
+
+.colours{
+    display: grid;
+    justify-content: right;
+}

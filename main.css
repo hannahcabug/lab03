@@ -1,115 +1,316 @@
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-    font-family: 'Ubuntu', sans-serif;
+  color: #222;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
 }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: #000;
+}
+
+
+/* ==========================================================================
+    LAYOUT
+   ========================================================================== */
 
 div,
-header,
+section,
 footer,
-section {
-    border: 1px ;
-    min-height: 3rem;
+header {
+  border: 1px ;
+}
+.column{
+  margin-right: 1rem;
+}
+.heading {
+  text-align: center;
 }
 
-.column {
-    margin: 1rem;
+.heading img{
+  max-width: 12rem;
 }
 
-.row {
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .row {
     display: grid;
-    width: 80vw;
-    min-width: 60rem;
-    max-width: 80rem;
+    width: 85vw;
+    max-width: 70rem;
     margin: 0 auto;
-}
+  }
 
-.slides{
-    display: grid;
-    justify-content: center;
-}
-
-.col-2 {
-    grid-template-columns: 1fr 1fr;
-}
-
-.col-3 {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.col-4 {
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.col-5 {
+  .m-col-2{
+    grid-template-columns: 1fr 1fr ;
+  }
+  .m-col-3{
+    grid-template-columns: repeat(3, 1fr) ;
+  }
+  .m-col-4{
+    grid-template-columns: repeat(4, 1fr) ;
+  }
+  .m-col-5{
     grid-template-columns: repeat(5, 1fr);
-}
-
-.col-6 {
-    grid-template-columns: repeat(6, 1fr);
-}
-
-.col-7 {
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.col-8 {
-    grid-template-columns: repeat(8, 1fr);
-}
-
-.col-1-2 {
+  }
+  .m-1-2{
     grid-template-columns: 1fr 2fr;
-}
-
-.row-span {
+  }
+  .span-full{
     grid-column-start: 1;
     grid-column-end: -1;
+  }
 }
 
-.sub-row {
-    display: grid;
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .special-project {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
 }
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .l-col-2{
+    grid-template-columns: 1fr 1fr ;
+  }
+  .l-col-3{
+    grid-template-columns: repeat(3,1fr) ;
+  }
+  .l-col-4{
+    grid-template-columns: repeat(4,1fr) ;
+  }
+  .l-col-5{
+    grid-template-columns: repeat(5,1fr) ;
+  }
+  .l-col-6{
+    grid-template-columns:repeat(6,1fr) ;
+  }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
+/* ==========================================================================
+   MODULES
+   ========================================================================== */
+
+
+
+
+/* ==========================================================================
+   THEME
+   ========================================================================== */
+  .page__footer{
+    background-color: #222;
+  }
+  .page__slider{
+    background-color: rgb(230, 230, 230);
+  }
 
 .hidden,
 [hidden] {
-    display: none !important;
+  display: none !important;
 }
 
-.logo{
-    display: grid;
-    align-items: baseline;
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
 }
 
-.heading{
-    display: grid;
-    justify-content: center;
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
 }
 
-.container .slides{
-    background-color: lightgray;
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
 }
 
-footer{
-    background-color: #16242f;
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
 }
 
-.sub-header{
-    display: grid;
-    justify-content: center;
+.clearfix::after {
+  clear: both;
 }
 
-.links{
-    display: grid;
-    justify-content: center;
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
 }
 
-.peewee{
-    display: grid;
-    justify-content: center;
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
 }
 
-.colours{
-    display: grid;
-    justify-content: right;
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " ("attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " ("attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
