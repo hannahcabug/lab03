@@ -54,10 +54,7 @@ h1 {
 }
 
 
-/* ==========================================================================
-    LAYOUT
-   ========================================================================== */
-
+/* layout */
 div,
 section,
 footer,
@@ -75,15 +72,19 @@ header {
   max-width: 12rem;
 }
 
+.thingsofabove img{
+  max-width: 40rem;
+}
+
 .sponsors img{
-  max-width: 15rem;
+  max-width: 60rem;
 }
 
 .footer-colors{
   display: grid;
-  justify-content: right;
-  align-items: right;
-  max-width: 30rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 25rem;
 }
 
 .project img{
@@ -95,14 +96,33 @@ footer{
   background-color: rgb(22, 36, 47);
 }
 
-/* Small only */
+.footer-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.page-footer p{
+  max-width: 40rem;
+}
+
+.page-footer .socials {
+  max-width: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* small only */
 @media screen and (max-width: 39.9375em) {
   .sponsors img{
     display: none;
   }
+
+  .footer-items{
+    display: none;
+  }
 }
 
-/* Medium and up */
+/* medium and up */
 @media screen and (min-width: 40em) {
   .row {
     display: grid;
@@ -130,9 +150,14 @@ footer{
     grid-column-start: 1;
     grid-column-end: -1;
   }
+
+  .page-footer .socials {
+    display: none;
+  }
+
 }
 
-/* Medium only */
+/* medium only */
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .special-project {
     grid-column-start: 1;
@@ -141,7 +166,7 @@ footer{
 
 }
 
-/* Large and up */
+/* large and up */
 @media screen and (min-width: 64em) {
   .l-col-2{
     grid-template-columns: 1fr 1fr ;
@@ -160,19 +185,12 @@ footer{
   }
 }
 
-/* Large only */
+/* large only */
 @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
 
-/* ==========================================================================
-   MODULES
-   ========================================================================== */
+/* modules */
+/* theme*/
 
-
-
-
-/* ==========================================================================
-   THEME
-   ========================================================================== */
   .page-footer{
     background-color: rgb(22, 36, 47);
   }
