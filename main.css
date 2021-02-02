@@ -73,7 +73,10 @@ header {
 }
 
 .about .do img{
-  max-width: 12rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .thingsofabove img{
@@ -90,49 +93,13 @@ footer{
   padding: 3rem;
 }
 
-.footer-items{
+.peewee{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.col-2 {
-  grid-template-columns: 1fr 1fr;
-}
-
-.col-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.col-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.col-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.col-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.col-7 {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.col-8 {
-  grid-template-columns: repeat(8, 1fr);
-}
-
-.col-1-2 {
   grid-template-columns: 1fr 2fr;
 }
 
 /* small only */
 @media screen and (max-width: 39.9375em) {
-  .peewee{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
   
   .sponsors img{
     display: none;
@@ -143,9 +110,11 @@ footer{
   }
 
   .footer-colors{
-    display: grid;
-    align-self: end;
-    max-width: 25rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  
   }
 
   .projects-new .work {
@@ -204,10 +173,16 @@ footer{
     text-align: center;
   }
 
-  .footer-colors{
+  .footer-items{
     display: grid;
-    align-items: right;
-    max-width: 20rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-colors{
+    display: block;
+    margin-left: auto;
+    margin-right: 0%;
+    width: 40%;
   }
 
   .socials{
@@ -226,6 +201,11 @@ footer{
 
   .sponsors .links{
     display: grid;
+  }
+
+  .about .things-we-do{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -257,6 +237,11 @@ footer{
     grid-template-columns:repeat(6,1fr) ;
   }
 
+  .about .things-we-do{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .projects-new .work {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -274,6 +259,11 @@ footer{
   .thingsofabove .things{
     display: grid;
     grid-template-columns: 1fr 1fr ;
+  }
+
+  .footer-items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
